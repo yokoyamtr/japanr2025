@@ -13,7 +13,7 @@ format:
       buttons: false
 ---
 
-## 研究者のあるある問題 {background-color="#2C3E50"}
+## Rを使う「生物医学系」研究者のあるある問題 {background-color="#2C3E50"}
 
 ::: {.incremental}
 - 実験データはExcel/Spreadsheetに記録
@@ -35,15 +35,13 @@ format:
 ### ローカルでHTML化するだけならQuartoで十分
 
 ::: {.incremental}
-- Quartoで美しいレポートは作成できる
 - でも、**ラボ内でどうやって共有する？**
   - メールで送る？ → バージョン管理が困難
   - 共有フォルダ？ → 改ざんのリスク
-  - GitHub？ → 非研究者には敷居が高い
+  - GitHub？ → 普段コードを書かない人には敷居が高い
 :::
 
 ::: {.fragment}
-### 共有だけでは不十分
 
 - **改ざん防止**: 誰がいつ変更したか記録が必要
 - **文書管理**: 大量のレポートをどう整理・検索するか
@@ -65,6 +63,7 @@ format:
 ::: {.columns}
 ::: {.column width="50%"}
 **求められること**
+
 - FAIR原則への準拠
 - 再現性の確保
 - オープンデータ化
@@ -73,9 +72,10 @@ format:
 
 ::: {.column width="50%"}
 **現場の声**
+
 - 「時間がない」
 - 「ツールが多すぎる」
-- 「ワークフローが複雑」
+- 「フローが複雑」
 - 「ELN（電子実験ノート）に馴染めない」
 :::
 :::
@@ -86,7 +86,7 @@ format:
 ## ELN導入の最大の壁 {background-color="#E74C3C"}
 
 ::: {style="font-size: 0.85em;"}
-### 既存のワークフローを壊したくない！
+### 既存の業務フローを壊したくない！
 
 ::: {.incremental}
 - 研究者はすでに慣れ親しんだツールを使っている
@@ -106,6 +106,7 @@ format:
 :::: {.columns}
 ::: {.column width="50%"}
 **RSpaceの特徴**
+
 - 🔓 オープンソース（2024年〜）
 - 🏗️ 構造化ドキュメント対応
 - 🔌 充実したAPI
@@ -115,6 +116,7 @@ format:
 
 ::: {.column width="50%"}
 **なぜRSpace？**
+
 - 研究機関での採用実績
 - 柔軟なカスタマイズ
 - プログラマティックアクセス
@@ -147,23 +149,37 @@ document_create_from_html(
 
 ---
 
+## 変換例 {background-color="#9B59B6"}
+
+::: {.columns}
+::: {.column width="50%"}
+![変換前](figure/example_from.png)
+:::
+
+::: {.column width="50%"}
+![変換後](figure/example_to.png)
+:::
+:::
+
+---
+
 ## rspacer で何ができる？ {background-color="#3498DB"}
 
 ### 3つの主要機能
 
 :::: {.columns}
 ::: {.column width="33%"}
-### 📥 データ取得
+#### 📥 データ取得
 RSpaceからメタデータを直接Rへ
 :::
 
 ::: {.column width="33%"}
-### 📤 レポート送信
+#### 📤 レポート送信
 Quarto → RSpace構造化ドキュメント
 :::
 
 ::: {.column width="33%"}
-### 📊 テーブル変換
+#### 📊 テーブル変換
 Excel/CSV → RSpaceドキュメント
 :::
 ::::
@@ -193,12 +209,11 @@ Excel/CSV → RSpaceドキュメント
 :::: {.columns}
 ::: {.column width="50%"}
 ### Before rspacer 😫
-1. RSpaceから手動でダウンロード
-2. Rで解析
-3. レポート作成
-4. RSpaceに**手動でコピペ**
-5. ファイルを**個別にアップロード**
-6. 再現性？ 🤷
+1. Rで解析
+2. レポート作成
+3. Slide/Spreadsheetなどに**手動でコピペ**
+4. ファイルを**個別にアップロード**
+5. 再現性？ 🤷
 :::
 
 ::: {.column width="50%"}
@@ -206,7 +221,7 @@ Excel/CSV → RSpaceドキュメント
 1. `file_download()` でメタデータ取得
 2. Rで解析（同じ）
 3. Quarto でレポート作成
-4. **`document_create_from_html()`** で完了！
+4. **`document_create_from_html()`** でアップロード完了！
 5. 再現性？ **完璧！**
 :::
 ::::
@@ -231,21 +246,6 @@ Excel/CSV → RSpaceドキュメント
 
 ::: {.fragment}
 **フィールド名とヘッダーを一致させるだけでOK！**
-:::
-:::
-
----
-
-## さらなる可能性 {background-color="#D35400"}
-
-::: {style="font-size: 0.85em;"}
-### 自動化の未来
-
-::: {.incremental}
-- **Shinyアプリ統合**: 「RSpaceにアップロード」ボタン
-- **自動メタデータ収集**: 解析日時・ソフトウェアバージョン・ファイルパス
-- **バッチ処理**: 大量のサンプルを一括アップロード
-- **パイプライン統合**: Nextflow/Snakemakeとの連携
 :::
 :::
 
@@ -347,7 +347,8 @@ vignette("rspacer")
 
 ::: {.column width="50%"}
 **リソース**
-- 📖 論文: [lacdr.github.io/rspacer-manuscript](https://lacdr.github.io/rspacer-manuscript/)
+
+- 📖 Paper: [lacdr.github.io/rspacer-manuscript](https://lacdr.github.io/rspacer-manuscript/)
 - 💻 GitHub: [github.com/LACDR/rspacer](https://github.com/LACDR/rspacer)
 - 📦 CRAN: `install.packages("rspacer")`
 :::
@@ -367,5 +368,5 @@ vignette("rspacer")
 :::
 
 ::: {style="text-align: center; font-size: 1em; margin-top: 2em;"}
-`library(rspacer)` で、あなたの研究も次のレベルへ 🚀
+資料: https://yokoyamtr.github.io/japanr2025/slides.html
 :::

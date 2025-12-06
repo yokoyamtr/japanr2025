@@ -25,3 +25,6 @@ Thumbs.db
 
 # stale
 backup/
+.Rproj.user
+
+/.quarto/
