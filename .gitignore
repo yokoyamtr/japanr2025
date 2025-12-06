@@ -1,0 +1,27 @@
+# R
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+*.Rproj.user
+
+# renv
+renv/
+
+# Quarto
+_quarto.yml.bak
+*.qmd.bak
+slides_files/
+*.html
+!docs/*.html
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# stale
+backup/
