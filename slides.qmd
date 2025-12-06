@@ -298,39 +298,6 @@ document_create_from_html(
 
 ---
 
-## コミュニティとエコシステム {background-color="#9B59B6"}
-
-::: {style="font-size: 0.85em;"}
-### オープンソースの力
-
-- **GitHub**: <https://github.com/LACDR/rspacer>
-- **CRAN**: 誰でも簡単にインストール可能
-- **MIT License**: 自由に使用・改変可能
-- **Documentation**: 詳細なビネット・例付き
-
-::: {.fragment}
-**あなたの研究ワークフローにも統合できる！**
-:::
-:::
-
----
-
-## まとめ：rspacerの価値 {background-color="#2C3E50"}
-
-::: {style="font-size: 0.85em;"}
-### データ管理のパラダイムシフト
-
-::: {.incremental}
-1. **統合**: R解析とELNのシームレスな連携
-2. **自動化**: 手作業を排除、エラーを削減
-3. **再現性**: すべてがコード化、追跡可能
-4. **FAIR**: データ管理のベストプラクティスを自然に実現
-5. **採用促進**: 研究者が実際に使いたくなるELN
-:::
-:::
-
----
-
 ## あなたの研究を加速する {background-color="#E74C3C"}
 
 ::: {style="font-size: 0.85em;"}
@@ -364,7 +331,6 @@ vignette("rspacer")
 :::
 
 ::: {style="text-align: center; font-size: 1.3em; margin-top: 1em;"}
-質問・ディスカッション歓迎 🎤
 :::
 
 ::: {style="text-align: center; font-size: 1em; margin-top: 2em;"}
