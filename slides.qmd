@@ -1,7 +1,7 @@
 ---
 title: "rspacerではじめる"
 subtitle: "R実験ノート生活"
-author: "Japan.R 2025"
+author: "Takao Yokoyama @Japan.R 2025"
 date: "2025-12-06"
 format:
   revealjs:
@@ -11,6 +11,12 @@ format:
     slide-number: true
     chalkboard:
       buttons: false
+---
+
+## 自己紹介 {background-color="#3498DB"}
+
+![](figure/homepage.png)
+
 ---
 
 ## Rを使う「生物医学系」研究者のあるある問題 {background-color="#2C3E50"}
